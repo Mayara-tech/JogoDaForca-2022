@@ -1,5 +1,6 @@
 package TrabalhoPraticol;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Vetor {
@@ -7,8 +8,10 @@ public class Vetor {
 	
 	//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//                                          CRIANDO VETOR DE DUAS DIMENSÃO E CARREGANDO BANCO DE DADOS
-	
-	public String[][] temaPalavra = {
+	public Vetor(int capacidade){
+	this.temaPalavra = new String [capacidade][capacidade];
+}
+	public static String[][] temaPalavra = {
 			{"CORES" ,"amarelo", "azul", "vermelho","preto", "cinza", "branco", "rosa", "roxo", "verde", "grafite"},
 			{"ANIMAIS", "elefante", "cachorro", "gato", "paassaro", "peixe", "urso", "hipopotamo", "garfanhoto", "hamster", "porco"},
 			{"OBJETO", "tesoura", "lapis", "gaiola", "colher", "panela", "televisão", "caneta", "celular", "geladeira", "teclado"},
@@ -20,10 +23,8 @@ public class Vetor {
 			{"ESTADOS BRASILEIROS", "amazonas", "goias", "amapa", "tocantins", "ceara", "piaui", "maranhao","sergipe", "roraima", "acre"},
 			{"TIMES DO BRASILEIRÃO", "corinthians", "flamengo", "vasco", "palmeiras", "santos", "cruzeiro", "fluminense","botafogo","gremio","internacional"}
 			};
-			public Vetor(int capacidade){
-			this.temaPalavra = new String [capacidade][capacidade];
-		
-}
+		public static ArrayList<String> temaPalavra1 = new ArrayList<>();
+
 			//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			//                                          CRIANDO METODO ADICIONAR
 	
@@ -42,5 +43,6 @@ public class Vetor {
 	@Override
 	public String toString() {
 		return Arrays.toString(temaPalavra);
+
 	}
 }
